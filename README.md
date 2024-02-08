@@ -1,3 +1,5 @@
+[![Test](https://github.com/xsamueljr/pydantic-vs-dataclasses/actions/workflows/test.yml/badge.svg)](https://github.com/xsamueljr/pydantic-vs-dataclasses/actions/workflows/test.yml)
+
 Ejercicio de prueba de validación de datos con Pydantic y dataclasses.
 
 Ambos modelos son iguales, y en cada test se prueban ambos, pues se espera el mismo comportamiento. Sus campos son:
