@@ -51,13 +51,13 @@ def test_can_create_users_with_valid_email(password, email):
         assert i.password == password
 
 
-@pytest.mark.parametrize("email", INVALID_EMAILS)
-def test_cannot_create_users_with_invalid_email(password, email):
+@pytest.mark.parametrize("invalid_email", INVALID_EMAILS)
+def test_cannot_create_users_with_invalid_email(password, invalid_email):
     with pytest.raises(ValueError):
-        _ = DUser(email=email, password=password)
+        _ = DUser(email=invalid_email, password=password)
 
     with pytest.raises(ValidationError):
-        _ = PUser(email=email, password=password)
+        _ = PUser(email=invalid_email, password=password)
 
 
 @pytest.mark.parametrize("invalid_password", INVALID_PASSWORDS)
